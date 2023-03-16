@@ -1,0 +1,18 @@
+---
+import SlideItem from "./slideItem.astro";
+import '@splidejs/splide/dist/css/splide.min.css';
+---
+
+<section class="my-24 px-6 lg:px-0 py-10">
+    <h1 class="text-3xl lg:text-4xl font-bold text-greenColor-400 text-center">اكتشف فروعنا واستمتع بتجربة شيقة</h1>
+    <div class="max-w-7xl mx-auto mt-12">
+        <div class="splide" id="locations" role="group" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                    <SlideItem path="locations/location.jpg" round={false}/>
+                  
+                  </ul>
+            </div>
+        </div>
+    </div>
+</section>

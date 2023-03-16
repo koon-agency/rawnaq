@@ -1,0 +1,125 @@
+---
+import About from '@components/about.astro';
+import Clients from '@components/clients.astro';
+import Locations from '@components/locations.astro';
+import Partners from '@components/partners.astro';
+import Main from '@components/Main.astro';
+import Button from '@components/Button.astro';
+import Layout from '@layouts/Layout.astro';
+import Promotion from '@components/Promotion.astro';
+import 'photoswipe/style.css';
+import '@splidejs/splide/dist/css/splide.min.css';
+---
+<Layout title="رونق الطبيعة">
+	<Main />
+	<About />
+	<Promotion />
+	<Clients />
+	<Locations />
+	<Partners />
+	<Button id="subscribe" type={'primary'} text="تواصل معنا الآن" href="//api.whatsapp.com/send?phone=00966583622747" className="mt-6 rtl mx-auto"/>
+</Layout>
+
+<script>
+	import Splide from '@splidejs/splide';
+	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+  
+  new Splide(document.getElementById('promos'), {
+	type   : 'loop',
+	direction: 'ltr',
+	perPage: 3,
+	focus:'center',
+	drag   : 'free',
+	snap   : true,
+	padding: {
+		right: 82,
+		left: 0
+	},
+	arrows: false,
+	pagination: false,
+	breakpoints: {
+		720: {
+			perPage:2,
+			padding: {
+				right: 41,
+				left: 0
+			}
+		}
+	}
+  }).mount();
+  new Splide(document.getElementById('locations'), {
+	type   : 'loop',
+	direction: 'ltr',
+	perPage: 3,
+	drag   : 'free',
+	snap   : true,
+	padding: {
+		right: 82,
+		left: 0
+	},
+	arrows: false,
+	pagination: false,
+	breakpoints: {
+		720: {
+			perPage:2,
+			padding: {
+				right: 41,
+				left: 0
+			}
+		}
+	},
+	autoScroll: {
+			speed: 0.35,
+			pauseOnHover: false,
+			pauseOnFocus: false
+		}
+  }).mount({ AutoScroll });
+  
+  new Splide(document.getElementById('gallery-1'), {
+	type   : 'loop',
+		direction: 'rtl',
+		perPage: 5,
+		drag   : 'free',
+		snap   : true,
+		padding: {
+			right: 0,
+			left: 0
+		},
+		arrows: false,
+		pagination: false,
+		breakpoints: {
+			720: {
+				perPage: 2
+			}
+		},
+		autoScroll: {
+			speed: 0.35,
+			pauseOnHover: false,
+			pauseOnFocus: false
+		},
+  }).mount({ AutoScroll });
+
+  new Splide(document.getElementById('gallery-2'), {
+	type   : 'loop',
+		direction: 'ltr',
+		perPage: 5,
+		drag   : 'free',
+		snap   : true,
+		padding: {
+			right: 0,
+			left: 0
+		},
+		arrows: false,
+		pagination: false,
+		breakpoints: {
+			720: {
+				perPage: 2
+			}
+		},
+		autoScroll: {
+			speed: 0.35,
+			pauseOnHover: false,
+			pauseOnFocus: false
+		},
+  }).mount({ AutoScroll });
+</script>

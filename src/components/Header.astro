@@ -1,0 +1,32 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<header class="w-full top-0 rtl bg-white z-10 relative">
+    <div class="max-w-7xl mx-auto  px-6 lg:px-0 flex justify-between items-center">
+        <nav id="nav-bar" class="w-full lg:static absolute lg:top-auto top-[6.5rem] lg:right-auto inset-x-0 transition duration-300 lg:opacity-100 lg:visible invisible opacity-0">
+            <ul class="flex items-start relative z-50 md:items-center flex-col md:flex-row my-auto rtl bg-white border border-gray-300 lg:border-none md:bg-inherit px-4 pb-4 mx-4 md:p-0 rounded-xl">
+                <NavLink title="التصنيفات" to=""/>
+                <NavLink title="موقعنا" to="https://goo.gl/maps/J2cmcGp89EdR9TcNA" />
+            </ul>
+        </nav>
+        <button class=" p-2 rounded-lg block lg:hidden" id="nav-toggle">
+            <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        <a href="#">
+            <img class="lg:w-[4.5rem] w-14 lg:ml-6 ml-0 h-full py-1" src="/images/logo.png" alt="logo">
+        </a>
+    </div>
+</header>
+
+<script>
+    let nav = document.getElementById('nav-bar');
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+        nav.classList.toggle('visible');
+        nav.classList.toggle('opacity-0');
+        nav.classList.toggle('invisible');
+        nav.classList.toggle('opacity-100');
+    });
+</script>

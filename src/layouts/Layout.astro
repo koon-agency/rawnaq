@@ -1,0 +1,137 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/fonts/Montserrat-Arabic Regular 400.otf" as="font" type="font/otf" crossorigin="">
+  <link rel="preload" href="/fonts/Montserrat-Arabic Medium 500.otf" as="font" type="font/otf" crossorigin="">
+  <link rel="preload" href="/fonts/Montserrat-Arabic SemiBold 600.otf" as="font" type="font/otf" crossorigin="">
+  <link rel="preload" href="/fonts/Montserrat-Arabic Bold 700.otf" as="font" type="font/otf" crossorigin="">
+  <title>{title}</title>
+  <meta name="description" content="سقف دافئ يحتضن رفاهية الحيوانات الأليفة">
+  <meta name="keywords" content="حيوانات،أليفة،رعاية،اهتمام،مستلزمات، طيور،قطط،كلاب">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="رونق الطبيعة">
+  <meta property="og:description" content="سقف دافئ يحتضن رفاهية الحيوانات الأليفة">
+  <meta property="og:image" content="/images/banner.png">
+  
+  <style is:global>
+    html{
+      scroll-behavior: smooth;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/fonts/Montserrat-Arabic Regular 400.otf');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      src: url('/fonts/Montserrat-Arabic Medium 500.otf');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/fonts/Montserrat-Arabic Bold 700.otf');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      src: url('/fonts/Montserrat-Arabic SemiBold 600.otf');
+      font-display: swap;
+    }
+    .rtl{
+      direction: rtl !important;
+    }
+    body {
+      font-family: 'Montserrat' !important;
+    }
+  </style>
+  <title>{title}</title>
+  <!-- Google Tag Manager -->
+<script client:only>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PF3WCLX');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRXRGTXY3X"></script>
+<script client:only>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PRXRGTXY3X');
+</script>
+
+  <!-- Snap Pixel Code -->
+  <script type='text/javascript' client:only>
+    (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+    {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+    a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+    r.src=n;var u=t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r,u);})(window,document,
+    'https://sc-static.net/scevent.min.js');
+    
+    snaptr('init', 'c7c8598b-fc62-4a06-ab73-513427df239a', {
+    'user_email': '_INSERT_USER_EMAIL_'
+    });
+    
+    snaptr('track', 'PAGE_VIEW');
+    
+    </script>
+    <!-- End Snap Pixel Code -->
+
+<!-- Meta Pixel Code -->
+<script client:only>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '518687266794507');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=518687266794507&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body class="font-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF3WCLX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  <Header />
+	<slot />
+  <Footer />
+</body>
+</html>

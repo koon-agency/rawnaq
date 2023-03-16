@@ -1,0 +1,21 @@
+---
+import SlideItem from "./slideItem.astro";
+import '@splidejs/splide/dist/css/splide.min.css';
+---
+
+<section class="my-24 px-6 lg:px-0 bg-brownColor-400 py-10">
+    <h1 class="text-3xl lg:text-4xl font-bold text-white text-center">رعاية تعانق احتياجاتهم</h1>
+      <p class="mt-8 text-xl text-center text-white">نعتني باستيراد أجود المنتجات من عدة مدن </p>
+    <div class="max-w-7xl mx-auto mt-12">
+        <div class="splide" id="promos" role="group" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                    <SlideItem path="items/china.jpg" />
+                    <SlideItem path="items/germany.jpg" />
+                    <SlideItem path="items/Portugal.jpg" />
+                    <SlideItem path="items/turkya.jpg" />
+                  </ul>
+            </div>
+        </div>
+    </div>
+</section>

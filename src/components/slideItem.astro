@@ -1,0 +1,13 @@
+---
+export interface Props {
+    round?: Boolean;
+    path:string;
+}
+const { path, round } = Astro.props;
+---
+
+<li class="splide__slide">
+    <a href="#" class="block mr-8">
+        <img class={`w-auto object-contain ${round ?? `rounded-full`} ` } src={path} alt="">
+    </a>
+</li>

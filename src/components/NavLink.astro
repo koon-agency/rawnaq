@@ -1,0 +1,19 @@
+---
+export interface Props {
+	title: string;
+    to?: string
+}
+
+let external = false;
+
+const { title, to } = Astro.props as Props;
+
+if (to && to.charAt(0) !== '#') {
+    external = true;
+}
+---
+<li class="lg:ml-12 md:mt-0 mt-6 rtl">
+    <a href={ to ?? `#` } target={external ? `_blank` : ``} rel={external ? `noopener noreferrer` : ``} class="font-medium lg:font-normal text-lg py-0.5 px-0.5 capitalize text-gray-600 hover:text-greenColor-400 focus:text-greenColor-400 transition duration-300">
+        { title }
+    </a>
+</li>
